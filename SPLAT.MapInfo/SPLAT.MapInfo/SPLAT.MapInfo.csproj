@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.47.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
@@ -15,4 +16,11 @@
     <ProjectReference Include="..\GoogleMapInfo\SPLAT.MapInfo.GoogleMapInfo.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Protobuf Include="Protos\distance.proto" GrpcServices="Server" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Folder Include="Protos\"/>	
+  </ItemGroup>
 </Project>

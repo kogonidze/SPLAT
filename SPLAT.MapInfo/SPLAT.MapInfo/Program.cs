@@ -1,4 +1,5 @@
 using GoogleMapInfo.Api;
+using SPLAT.MapInfo.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<GoogleDistanceApi>();
 builder.Services.AddControllers();
+builder.Services.AddGrpc();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -23,6 +25,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.MapGrpcService<DistanceInfoService>();
 app.MapControllers();
 
 app.Run();
