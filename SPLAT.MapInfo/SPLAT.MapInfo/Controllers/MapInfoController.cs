@@ -1,6 +1,6 @@
-﻿using GoogleMapInfo.Api;
-using GoogleMapInfo.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using SPLAT.MapInfo.GoogleMapInfo.Api;
+using SPLAT.MapInfo.GoogleMapInfo.Models;
 
 namespace SPLAT.MapInfo.Controllers
 {

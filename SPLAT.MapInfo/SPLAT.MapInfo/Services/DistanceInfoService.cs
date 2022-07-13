@@ -1,5 +1,5 @@
-﻿using GoogleMapInfo.Api;
-using Grpc.Core;
+﻿using Grpc.Core;
+using SPLAT.MapInfo.GoogleMapInfo.Api;
 using SPLAT.MapInfo.Protos;
 
 namespace SPLAT.MapInfo.Services

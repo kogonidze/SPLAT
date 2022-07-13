@@ -1,4 +1,4 @@
-using GoogleMapInfo.Api;
+using SPLAT.MapInfo.GoogleMapInfo.Api;
 using SPLAT.MapInfo.Services;
 
 var builder = WebApplication.CreateBuilder(args);

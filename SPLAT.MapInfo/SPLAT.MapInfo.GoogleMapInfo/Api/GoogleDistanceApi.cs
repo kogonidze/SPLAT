@@ -1,8 +1,8 @@
-﻿using GoogleMapInfo.Models;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
+using SPLAT.MapInfo.GoogleMapInfo.Models;
 using System.Text.Json;
 
-namespace GoogleMapInfo.Api
+namespace SPLAT.MapInfo.GoogleMapInfo.Api
 {
     public class GoogleDistanceApi
     {
@@ -13,7 +13,7 @@ namespace GoogleMapInfo.Api
             _configuration = configuration;
         }
 
-        public async Task<GoogleDistanceData> 
+        public async Task<GoogleDistanceData>
             GetMapDistance(string originCity, string destinationCity)
         {
             var apiKey = _configuration["googleDistanceApi:apiKey"];
@@ -31,7 +31,7 @@ namespace GoogleMapInfo.Api
 
             await using var data = await response.Content.ReadAsStreamAsync();
 
-            var distanceInfo = await 
+            var distanceInfo = await
                 JsonSerializer.DeserializeAsync<GoogleDistanceData>(data);
 
             return distanceInfo;

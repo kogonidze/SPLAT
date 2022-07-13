@@ -1,4 +1,4 @@
-﻿namespace GoogleMapInfo.Models
+﻿namespace SPLAT.MapInfo.GoogleMapInfo.Models
 {
     public class GoogleDistanceData
     {

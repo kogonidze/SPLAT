@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLAT.MapInfo", "SPLAT.MapInfo\SPLAT.MapInfo.csproj", "{F4CF6F4E-3784-46AA-A480-64DB12BEBCB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLAT.MapInfo.GoogleMapInfo", "GoogleMapInfo\SPLAT.MapInfo.GoogleMapInfo.csproj", "{D8050554-7E38-453E-9A31-3374C336BF67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SPLAT.MapInfo.GoogleMapInfo", "SPLAT.MapInfo.GoogleMapInfo\SPLAT.MapInfo.GoogleMapInfo.csproj", "{D8050554-7E38-453E-9A31-3374C336BF67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPLAT.MapInfo.gRPCTestClient", "SPLAT.MapInfo.gRPCTestClient\SPLAT.MapInfo.gRPCTestClient.csproj", "{2D532518-8549-4CE6-9122-BB8D133F58F3}"
 EndProject
