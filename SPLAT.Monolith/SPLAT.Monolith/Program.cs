@@ -1,3 +1,5 @@
+using MassTransit;
+using SPLAT.Messaging.Contracts;
 using SPLAT.Monolith.Common.Constants;
 using SPLAT.Monolith.Services;
 
@@ -7,12 +9,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped(typeof(IDistanceInfoSvc), typeof(DistanceInfoSvc));
 builder.Services.AddScoped(typeof(IQuoteSvc), typeof(QuoteSvc));
+builder.Services.AddScoped(typeof(IInvoiceSvc), typeof(InvoiceSvc));
 
 var distanceMicroserviceUrl = builder.Configuration.GetSection(MicroserviceNames.DistanceMicroservice).Value;
 
 builder.Services.AddHttpClient(MicroserviceNames.DistanceMicroservice, client =>
 {
     client.BaseAddress = new Uri(distanceMicroserviceUrl);
+});
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host("localhost");
+    });
 });
 
 builder.Services.AddControllers();
@@ -34,5 +45,13 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapPost(pattern: "/api/invoices",
+    handler: async (int customerNumber, List<InvoiceItems> invoiceItems, IInvoiceSvc invoiceSvc) =>
+    {
+        await invoiceSvc.CreateInvoice(customerNumber, invoiceItems);
+
+        return Results.Ok();
+    });
 
 app.Run();

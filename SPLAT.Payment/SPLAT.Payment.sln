@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPLAT.Payment", "SPLAT.Payment\SPLAT.Payment.csproj", "{55FB80D2-0729-4840-81AF-887A9999B0E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPLAT.Payment.FakeBank", "SPLAT.Payment.FakeBank\SPLAT.Payment.FakeBank.csproj", "{01BD654A-DB65-4951-A80C-310F6AFD5E3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55FB80D2-0729-4840-81AF-887A9999B0E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FB80D2-0729-4840-81AF-887A9999B0E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FB80D2-0729-4840-81AF-887A9999B0E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FB80D2-0729-4840-81AF-887A9999B0E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01BD654A-DB65-4951-A80C-310F6AFD5E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01BD654A-DB65-4951-A80C-310F6AFD5E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01BD654A-DB65-4951-A80C-310F6AFD5E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01BD654A-DB65-4951-A80C-310F6AFD5E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D21647C-973B-4017-87D5-BEB77F33D443}
+	EndGlobalSection
+EndGlobal
