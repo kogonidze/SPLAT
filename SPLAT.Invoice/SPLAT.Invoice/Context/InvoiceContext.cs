@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SPLAT.Messaging.Contracts;
+using SPLAT.Invoice.Models;
 
-namespace SPLAT.Invoice
+namespace SPLAT.Invoice.Context
 {
     public class InvoiceContext : DbContext
     {
-        public DbSet<Invoice>  Invoices { get; set; }
+        public DbSet<Models.Invoice> Invoices { get; set; }
+        public DbSet<InvoiceItem> InvoiceItems { get; set; }
 
         public InvoiceContext()
         {

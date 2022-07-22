@@ -1,10 +1,12 @@
-﻿namespace SPLAT.Messaging.Contracts
+﻿namespace SPLAT.Invoice.Models
 {
-    public class InvoiceItems
+    public class InvoiceItem
     {
         public int Id { get; set; }
 
-        public int ClientId { get; set; }
+        public int InvoiceId { get; set; }
+
+        public Invoice Invoice { get; set; }
 
         public string Description { get; set; }
 

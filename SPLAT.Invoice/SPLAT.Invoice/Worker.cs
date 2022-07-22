@@ -1,4 +1,5 @@
 using MassTransit;
+using SPLAT.Invoice.Consumers;
 
 namespace SPLAT.Invoice
 {

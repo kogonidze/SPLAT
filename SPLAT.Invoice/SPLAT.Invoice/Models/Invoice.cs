@@ -1,6 +1,4 @@
-﻿using SPLAT.Messaging.Contracts;
-
-namespace SPLAT.Invoice
+﻿namespace SPLAT.Invoice.Models
 {
     public class Invoice
     {
@@ -8,8 +6,8 @@ namespace SPLAT.Invoice
 
         public int CustomerId { get; set; }
 
-        public List<InvoiceItems> InvoiceItems { get; set; }
-
         public DateTime Created { get; set; }
+
+        public List<InvoiceItem> InvoiceItems { get; set; }
     }
 }
