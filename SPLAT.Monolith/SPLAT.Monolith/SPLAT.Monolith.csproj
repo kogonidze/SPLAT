@@ -7,11 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SPLAT.Monolith.Common\SPLAT.Monolith.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SPLAT.Messaging">
+      <HintPath>..\..\SPLAT.Messaging\SPLAT.Messaging\bin\Release\net6.0\SPLAT.Messaging.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
